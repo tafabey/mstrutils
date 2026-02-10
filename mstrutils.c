@@ -36,3 +36,21 @@ char *mstrchr(const char *str, int ch) {
     
     return 0;
 }
+
+char *mstrstr(const char *str, const char *substr) {
+    int ctr = 0;
+    
+    while (str++) {
+	if (*str == substr[ctr]) {
+	    ctr++;
+	} else {
+	    ctr = 0;
+	}
+	
+	if (ctr == mstrlen(substr)) {
+	    return (char*) str - ctr + 1;
+	}
+    }
+
+    return "";
+}
