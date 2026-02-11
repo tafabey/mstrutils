@@ -7,6 +7,7 @@ Re-writing string.h for learning and fun.
 ## Currently available functions:
 - mstrlen
 - mstrcmp
+- mstrncmp
 - mstrcpy
 - mstrchr
 - mstrstr
