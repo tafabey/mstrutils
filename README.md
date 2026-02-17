@@ -7,10 +7,11 @@ Re-writing string.h for learning and fun.
 ## Currently available functions:
 - mstrlen
 - mstrcmp
-- mstrncmp
 - mstrcpy
 - mstrchr
 - mstrstr
+- mstrncmp
+- mstrncpy
 
 Function headers can be seen in the `mstrutils.h` file.
 

@@ -65,3 +65,12 @@ int mstrncmp(const char *str1, const char *str2, int n) {
 
     return 0;
 }
+
+char *mstrncpy(char *dst, const char *src, int n) {
+    int i;
+    for (i = 0; i < n; i++)
+	dst[i] = src[i];
+
+     dst[i] = '\0';
+     return dst;
+}
