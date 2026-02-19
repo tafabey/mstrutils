@@ -74,3 +74,12 @@ char *mstrncpy(char *dst, const char *src, int n) {
      dst[i] = '\0';
      return dst;
 }
+
+char *mstrcat(char *dst, const char *src) {
+    int dstlen = mstrlen(dst);
+    
+    for (int i = 0; src[i] != '\0'; i++)
+	dst[dstlen + i] = src[i];
+    
+    return (char *) dst;
+}
