@@ -83,3 +83,12 @@ char *mstrcat(char *dst, const char *src) {
     
     return (char *) dst;
 }
+
+char *mstrncat(char *dst, const char *src, int n) {
+    int dstlen = mstrlen(dst);
+    
+    for (int i = 0; src[i] != '\0' && i < n; i++)
+	dst[dstlen + i] = src[i];
+    
+    return (char *) dst;
+}

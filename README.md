@@ -13,6 +13,7 @@ Re-writing string.h for learning and fun.
 - mstrncmp
 - mstrncpy
 - mstrcat
+- mstrncat
 
 Function headers can be seen in the `mstrutils.h` file.
 
