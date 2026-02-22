@@ -92,3 +92,13 @@ char *mstrncat(char *dst, const char *src, int n) {
     
     return (char *) dst;
 }
+
+void *mmemcpy(void *dst, const void *src, int n) {
+    char *ptr1 = (char *) dst;
+    char *ptr2 = (char *) src;
+    for (int i = 0; i < n; i++) {
+	*ptr1++ = *ptr2++;
+    }
+
+    return dst;
+}
