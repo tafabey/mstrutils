@@ -4,6 +4,15 @@ Re-writing string.h for learning and fun.
 
 ---
 
+## Why use this library?
+
+- It does not depend standart C library
+- It's binary size is too small
+- It has easy-readable and short code
+- It distributed with [BSD-3-Clause](LICENSE) license
+
+---
+
 ## Currently available functions:
 - mstrlen
 - mstrcmp
@@ -28,7 +37,7 @@ Function headers can be seen in the `mstrutils.h` file.
 gcc -c mstrutils.c
 
 ```
-This command creates the mstrutils.o file
+This command creates the `mstrutils.o` file
 
 ---
 
