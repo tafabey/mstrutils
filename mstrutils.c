@@ -103,3 +103,13 @@ void *mmemcpy(void *dst, const void *src, int n) {
 
     return dst;
 }
+
+int mmemcmp(const void *ptr1, const void *ptr2, int n) {
+    char *cp1 = (char *) ptr1;
+    char *cp2 = (char *) ptr2;
+    for (int i = 0; i < n; i++)
+	if (cp1[i] != cp2[i])
+	    return cp1[i] - cp2[i];
+
+    return 0;
+}
