@@ -2,6 +2,10 @@
 
 Re-writing string.h for learning and fun.
 
+## What is string.h
+
+There is no string data structure in the C programming language. There are arrays of type char. And the string.h library is a library that allows you to do some operations on these char arrays.
+
 ## Why use this library?
 
 - It does not depend standard C library
