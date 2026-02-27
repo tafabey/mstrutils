@@ -4,8 +4,8 @@ Re-writing string.h for learning and fun.
 
 ## Why use this library?
 
-- It does not depend standart C library
-- It's binary size is too small
+- It does not depend standard C library
+- Binary size is too small
 - It has easy-readable and short code
 - It distributed with [BSD-3-Clause](LICENSE) license
 
@@ -24,15 +24,41 @@ Re-writing string.h for learning and fun.
 
 Function headers can be seen in the `mstrutils.h` file.
 
-## Compiling and creating object file
+## Compiling and installing
 
 ```bash
-
-gcc -c mstrutils.c
-
+make
+make install
 ```
-This command creates the `mstrutils.o` file
+
+This command creates the `libmstr.so` file and copies it into ~/.local/lib/
+If you can't compile or run your code with this library, check out the *Troubleshooting* section at the end of the README.
 
 ## How to use
 
-To use functions, you can add the text `#include "mstrutils.h"` to the top of your code.
+To use functions, you can add the text `#include <mstrutils.h>` to the top of your code.
+While compiling your code with this library, use `-lmstr` flag
+
+## Troubleshooting
+
+Sometimes your system can't see this folder for libraries. If you can use root, you can type
+
+```bash
+make
+sudo make install PREFIX=/usr/local
+```
+
+But if you can't do this, add this to your .bashrc:
+
+```bash
+export LD_LIBRARY_PATH=$HOME/.local/lib:$LD_LIBRARY_PATH
+export LIBRARY_PATH=$HOME/.local/lib:$LIBRARY_PATH
+export C_INCLUDE_PATH=$HOME/.local/include:$C_INCLUDE_PATH
+```
+
+And run this command:
+```bash
+source ~/.bashrc
+```
+
+Thanks for reading.
