@@ -32,6 +32,7 @@ make install
 ```
 
 This command creates the `libmstr.so` file and copies it into ~/.local/lib/
+
 If you can't compile or run your code with this library, check out the *Troubleshooting* section at the end of the README.
 
 ## How to use
@@ -41,7 +42,7 @@ While compiling your code with this library, use `-lmstr` flag
 
 ## Troubleshooting
 
-Sometimes your system can't see this folder for libraries. If you can use root, you can type
+Sometimes your system can't see ~/.local/lib/ for libraries. If you can use root, you can type
 
 ```bash
 make
