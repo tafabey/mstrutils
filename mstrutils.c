@@ -113,3 +113,19 @@ int mmemcmp(const void *ptr1, const void *ptr2, int n) {
 
     return 0;
 }
+
+void *mmemmove(void *dst, const void *src, int n) {
+    char *ptr1 = (char *) dst;
+    char *ptr2 = (char *) src;
+    if (dst < src) {
+	for (int i = 0; i < n; i++) {
+	    ptr1[i] = ptr2[i];
+	}
+    } else {
+	for (int i = n - 1; i >= 0; i--) {
+	    ptr1[i] = ptr2[i];
+	}
+    }
+    
+    return dst;
+}

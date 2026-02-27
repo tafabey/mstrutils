@@ -12,5 +12,6 @@ char *mstrcat(char *dst, const char *src);
 char *mstrncat(char *dst, const char *src, int n);
 void *mmemcpy(void *dst, const void *src, int n);
 int mmemcmp(const void *ptr1, const void *ptr2, int n);
+void *mmemmove(void *dst, const void *src, int n);
 
 #endif
