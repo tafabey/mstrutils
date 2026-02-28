@@ -25,6 +25,7 @@ There is no string data structure in the C programming language. There are array
 - mstrncat
 - mmemcpy
 - mmemcmp
+- mmemmove
 
 Function headers can be seen in the `mstrutils.h` file.
 
