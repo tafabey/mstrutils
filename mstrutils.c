@@ -131,3 +131,12 @@ void *mmemmove(void *dst, const void *src, int n) {
 
     return dst;
 }
+
+void *mmemset(void *dst, int ch, int n) {
+    char *ptr = (char*)dst;
+    for (int i = 0; i < n; i++) {
+	ptr[i] = (char)ch;
+    }
+    
+    return dst;
+}
