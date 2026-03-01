@@ -1,5 +1,9 @@
 #include "mstrutils.h"
 
+#ifndef NULL
+#define NULL ((void*)0)
+#endif
+
 int mstrlen(const char *str) {
     int len = 0;
     while (str[len] != '\0')
@@ -40,21 +44,27 @@ char *mstrchr(const char *str, int ch) {
 
 char *mstrstr(const char *str, const char *substr) {
     int ctr = 0;
-    sublen = mstrlen(substr);
+    int ctr_start = 0;
+    int sublen = mstrlen(substr);
     
-    while (str++) {
-        if (*str == substr[ctr]) {
+    for (int i = 0; str[i] != '\0'; i++) {
+        if (str[i] == substr[ctr]) {
+	    if (ctr == 0) {
+		ctr_start = i;
+	    }
             ctr++;
         } else {
             ctr = 0;
+	    ctr_start++;
+	    i = ctr_start - 1;
         }
 
         if (ctr == sublen) {
-            return (char*)str - ctr + 1;
+            return (char *)&str[i - sublen + 1];
         }
     }
 
-    return "";
+    return NULL;
 }
 
 int mstrncmp(const char *str1, const char *str2, int n) {
