@@ -40,7 +40,8 @@ char *mstrchr(const char *str, int ch) {
 
 char *mstrstr(const char *str, const char *substr) {
     int ctr = 0;
-
+    sublen = mstrlen(substr);
+    
     while (str++) {
         if (*str == substr[ctr]) {
             ctr++;
@@ -48,7 +49,7 @@ char *mstrstr(const char *str, const char *substr) {
             ctr = 0;
         }
 
-        if (ctr == mstrlen(substr)) {
+        if (ctr == sublen) {
             return (char*)str - ctr + 1;
         }
     }
