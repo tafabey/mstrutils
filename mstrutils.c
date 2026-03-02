@@ -34,12 +34,13 @@ char *mstrcpy(char *dst, const char *src) {
 }
 
 char *mstrchr(const char *str, int ch) {
-    while (str++) {
-        if (*str == ch)
-            return (char*)str;
+    for (int i = 0; str[i] != '\0'; i++) {
+	if (str[i] == ch) {
+	    return (char*) str + i;
+	}
     }
 
-    return 0;
+    return NULL;
 }
 
 char *mstrstr(const char *str, const char *substr) {
