@@ -151,3 +151,14 @@ void *mmemset(void *dst, int ch, int n) {
     
     return dst;
 }
+
+char *mstrrchr(const char *str, int ch) {
+    int slen = mstrlen(str);
+    for (int i = slen - 1; i > 0; i--) {
+	if (str[i] == ch) {
+	    return (char*)str + i;
+	}
+    }
+
+    return NULL;
+}

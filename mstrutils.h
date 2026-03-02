@@ -14,5 +14,6 @@ void *mmemcpy(void *dst, const void *src, int n);
 int mmemcmp(const void *ptr1, const void *ptr2, int n);
 void *mmemmove(void *dst, const void *src, int n);
 void *mmemset(void *dst, int ch, int n);
+char *mstrrchr(const char *str, int ch);
 
 #endif
