@@ -6,9 +6,10 @@
 
 int mstrlen(const char *str) {
     int len = 0;
-    while (str[len] != '\0')
-        len++;
-
+    while (str[len] != '\0') {
+	len++;
+    }
+    
     return len;
 }
 
@@ -161,5 +162,19 @@ char *mstrrchr(const char *str, int ch) {
 	}
     }
 
+    return NULL;
+}
+
+void *mmemchr(const void *ptr, int c, int n) {
+    if (ptr == NULL) {
+	return NULL;
+    }
+    char *str = (char*)ptr;
+    for (int i = 0; i < n; i++) {
+	if (str[i] == c) {
+	    return &str[i];
+	}
+    }
+    
     return NULL;
 }
